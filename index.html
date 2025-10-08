@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nadeem Fizan Marriage Hall</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay">
+    <header class="fade-in">
+      <h1>Nadeem Fizan Marriage Hall</h1>
+      <p>📍 Ghani Commercial, Haroonabad | Capacity: 700 Guests</p>
+    </header>
+
+    <section class="booking-section slide-up">
+      <h2>Book Your Event</h2>
+      <form id="bookingForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="date" id="date" required />
+        <input type="number" id="guests" placeholder="Number of Guests" required />
+        <button type="submit">Book on Website</button>
+      </form>
+
+      <a
+        href="https://wa.me/923467616511?text=Hello!%20I%20want%20to%20book%20Nadeem%20Fizan%20Marriage%20Hall."
+        class="whatsapp-btn pulse"
+        target="_blank"
+      >Book on WhatsApp</a>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery fade-in-delay">
+      <h2>Our Beautiful Hall</h2>
+      <div class="gallery-images">
+        <img src="2812.png" alt="Hall Image 1">
+        <img src="2813.png" alt="Hall Image 2">
+        <img src="2814.png" alt="Hall Image 3">
+        <img src="2815.png" alt="Hall Image 4">
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="fade-in-delay">
+      <p>© 2025 Nadeem Fizan Marriage Hall | Designed by Tayyab Graphics</p>
+      <div class="social-links">
+        <a href="https://www.tiktok.com/@nadeemfizan02" target="_blank" class="tiktok-link">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/TikTok_logo.svg" alt="TikTok" />
+          @nadeemfizan02
+        </a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("bookingForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const date = document.getElementById("date").value;
+      const guests = document.getElementById("guests").value;
+      const msg = `Hello! My name is ${name}. I want to book Nadeem Fizan Marriage Hall for ${date} for ${guests} guests.`;
+      const url = `https://wa.me/923467616511?text=${encodeURIComponent(msg)}`;
+      window.open(url, "_blank");
+    });
+  </script>
+</body>
+</html>
